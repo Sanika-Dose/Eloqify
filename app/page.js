@@ -723,20 +723,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 "use client";
 import React, { useState } from "react";
 import Head from "next/head";
@@ -786,8 +772,22 @@ const page = () => {
           <div className="container mx-auto flex justify-between items-center px-6">
             {/* Logo */}
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-white">Eloqify</span>
+              <span className="text-3xl font-bold text-white">
+                <motion.div
+                            initial={{ opacity: 2, x: -20 }}
+                            animate={{ opacity: 5, x: 0 }}
+                            transition={{ delay: 3.2 }}
+                            className="flex flex-col"
+                          >
+                            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                              Eloqify
+                            </span>
+                            <span className="text-xs text-gray-400">AI Interview Coach</span>
+                          </motion.div>
+              </span>
             </div>
+
+            
 
             {/* Navigation */}
             <nav className="flex items-center space-x-6">
@@ -818,13 +818,13 @@ const page = () => {
 
               {/* Login and Sign Up Buttons */}
               <a
-                href="/login"
+                href="/dashboard"
                 className="text-md font-semibold text-white hover:text-gray-300 transition-all"
               >
                 Login
               </a>
               <a
-                href="/signup"
+                href="/dashboard"
                 className="px-5 py-2 text-md font-semibold bg-gradient-to-r from-[#6C63FF] to-[#4A90E2] text-white rounded-lg shadow-md hover:opacity-90 transition-all"
               >
                 Sign Up
